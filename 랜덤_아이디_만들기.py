@@ -1,16 +1,16 @@
 import random as 랜덤
 import string as 문자열
 
-f = open("countrynum.txt", "r", encoding='utf_8')
+파일 = open("countrynum.txt", "r", encoding='utf_8')
 
 국가_코드 = {}
 성별_리스트 = ['남자', '여자', '논바이너리']
-데이터 = f.read().splitlines()
+데이터 = 파일.read().splitlines()
 
 for 나 in 데이터:
     나라, 숫자 = 나.split(': ')
     국가_코드[나라] = 숫자
-f.close()
+파일.close()
 
 def 새로운_국가코드_입력():
     global 국가_코드
@@ -23,11 +23,11 @@ def 새로운_국가코드_입력():
     넣을나라 = 대답
     대답 = input("\n등록할 나라 코드 입력\n▶ ")
     숫자 = 대답
-    a = open("countrynum.txt", "w", encoding='utf_8')
+    파일 = open("countrynum.txt", "w", encoding='utf_8')
     국가_코드[넣을나라] = 숫자
     for 나라, 숫자 in 국가_코드.items():
-        a.write(f"{나라}: {숫자}\n")
-    a.close()
+        파일.write(f"{나라}: {숫자}\n")
+    파일.close()
 
 def 등록번호_만들기():
     while True:
@@ -67,4 +67,4 @@ while 1:
     elif 대답 == '3':
         break
     else:
-        print("젠장 잘못 입력했잖어")
+        print("젠장 잘못 입력했잖아")
