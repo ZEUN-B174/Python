@@ -8,7 +8,9 @@ file_nickname = {
     "링딩동": "lingdingdong.py",
     "전투": "battle.py",
     "영영사전": "dictionary.py",
-    "가챠": "gacha.py"} # 파일 별명과 파일 이름 매핑
+    "가챠": "gacha.py",
+    "로그인": "login_version2.py",
+    "편의점관리": "store_manage.py",} # 파일 별명과 파일 이름 매핑
 
 while True:
     print("\n파일 목록:")
