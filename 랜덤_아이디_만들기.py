@@ -3,6 +3,8 @@ import string as 문자열
 
 파일 = open("countrynum.txt", "r", encoding='utf_8')
 
+참 = True
+
 국가_코드 = {}
 성별_리스트 = ['남자', '여자', '논바이너리']
 데이터 = 파일.read().splitlines()
@@ -30,7 +32,7 @@ def 새로운_국가코드_입력():
     파일.close()
 
 def 등록번호_만들기():
-    while True:
+    while 참:
         대답 = input("\n캐릭터 등록번호를 만들까요? (ㅇ(예), ㄴ(아니오))\n▶ ")
         if 대답 == 'ㄴ':
             break
@@ -53,12 +55,12 @@ def 등록번호_만들기():
 
         등록번호 = 국가_코드[쓸나라] + str(성별_리스트.index(성별) + 1) + "-"
 
-        for i in range(6):
+        for 나 in range(6):
             등록번호 += str(랜덤.choice(문자열.ascii_uppercase + 문자열.digits))
 
         print(f"\n결과: {등록번호}")
 
-while 1:
+while 참:
     대답 = input("\n할 일을 고르세요(1: 등록번호 만들기, 2: 국가 코드 추가하기, 3: 종료): ")
     if 대답 == '1':
         등록번호_만들기()
